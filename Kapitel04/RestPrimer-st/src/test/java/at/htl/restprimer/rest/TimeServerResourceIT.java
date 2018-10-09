@@ -1,4 +1,4 @@
-package at.htl.stundenverwaltungsrs.rest;
+package at.htl.restprimer.rest;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -13,7 +13,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertTrue;
 
-public class Stundenverwaltungsrs {
+public class TimeServerResourceIT {
 
     private Client client;
     private WebTarget tut;
@@ -21,15 +21,15 @@ public class Stundenverwaltungsrs {
     @Before
     public void initClient(){
         this.client = ClientBuilder.newClient();
-        this.tut = this.client.target("http://localhost:8080/stundenverwaltung/rs/stundenverwaltung/nexthour");
+        this.tut = this.client.target("http://localhost:8080/restprimer/rs/time");
     }
 
     @Test
-    public void fetchHours()
+    public void fetchTime()
     {
         Response res = this.tut.request(MediaType.TEXT_PLAIN).get();
         assertThat(res.getStatus(),is(200));
         String payload = res.readEntity(String.class);
-        assertTrue(payload.startsWith("Hours: "));
+        assertTrue(payload.startsWith("Time: "));
     }
 }

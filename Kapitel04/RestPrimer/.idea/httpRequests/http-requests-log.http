@@ -1,0 +1,38 @@
+GET http://localhost:8080/restprime/rs/time
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-09-25T103250.404.html
+
+###
+
+GET http://localhost:8080/restprime/rs/time
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-09-25T102952.404.html
+
+###
+
+GET http://localhost:8080/restprime/rs/time
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-09-24T120023.200.txt
+
+###
+
+GET http://localhost:8080/restprime/rs/time
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-09-24T114429.200.txt
+
+###
+
+GET http://localhost:8080/restprime/rs
+Accept: */*
+Cache-Control: no-cache
+
+###
+
